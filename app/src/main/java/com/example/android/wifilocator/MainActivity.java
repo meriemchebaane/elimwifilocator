@@ -31,6 +31,7 @@ import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.*;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
@@ -197,11 +198,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     ssid1.getAccessPoints().add(new AccessPoint(wifi.getLevel(), GoogleLocationAsyncTask.latLng.latitude, GoogleLocationAsyncTask.latLng.longitude));
                                 }
                                 else {
-//                                    ArrayList<AccessPoint> accessPoints = new ArrayList<AccessPoint>();
-//                                    accessPoints.add(new AccessPoint(wifi.getLevel(), GoogleLocationAsyncTask.latLng.latitude, GoogleLocationAsyncTask.latLng.longitude));
-//                                    SSID ssid2 = new SSID(wifi.getSSID());
-//                                    ssid2.setAccessPoints(accessPoints);
-//                                    region[0].getListSSID().add(ssid2);
                                     region[0].getListSSID().add(createSSID(wifi));
                                 }
                             }
@@ -210,19 +206,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     }
                 });
                 thread.start();
-//                for(SSID ssid : ssids){
-//
-//                    //Exclude the wifis with security restriction
-//                    if(!ssid.getSecurity().contains("WPA") && !ssid.getSecurity().contains("WPA2")) {
-//                        //if you only want a specific wifi set its ssid
-////                      if(Pattern.compile(Pattern.quote("Mediterranee"), Pattern.CASE_INSENSITIVE).matcher(wifi.getSSID()).find())
-////                        mWifisDatabaseReference.child(ssid.getSSID() + ": " + ssid.getRegion()).setValue(ssid);
-//
-//
-//                        mWifisDatabaseReference.child(region[0].getRegion()).setValue(region[0]);
-//
-//                    }
-//                }
             }
         });
 
@@ -312,6 +295,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 LatLng result = new LatLng(point.getLat(), point.getLng());
                 results.add(result);
             }
+            AccessPoint center = bestWifiPoints.get(0);
+            mGoogleMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder().target(new LatLng(center.getLat(), center.getLng())).zoom(20).build()));
             //Adding the heatMap with all wifis locations to the map
             addHeatMap(results);
         }

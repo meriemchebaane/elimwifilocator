@@ -6,14 +6,8 @@
 
 package com.example.chebaane.myapplication.backend;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.internal.Log;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -24,7 +18,6 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.*;
@@ -69,10 +62,7 @@ public class MyServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-
 
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -117,42 +107,5 @@ public class MyServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-//        InputStream input = req.getInputStream();
-//        Reader reader = new InputStreamReader(input, "UTF-8");
-//        List<AccessPoint> accessPoints = new GsonBuilder().serializeSpecialFloatingPointValues().create()
-//                .fromJson(reader, new TypeToken<List<AccessPoint>>(){}.getType());
-//        List<Point>points=new ArrayList<Point>();
-//        for(AccessPoint accessPoint:accessPoints){
-//            points.add(new Point(accessPoint.getLevel(),accessPoint.getLat(),accessPoint.getLng()));
-//        }
-//
-//
-//        KMeans kMeans = new KMeans(points,3);
-//        List<Cluster> pointsClusters = kMeans.getPointsClusters();
-//        for (int i = 0; i < kMeans.k ; i++)
-//            System.out.println("Cluster " + i + ": " + pointsClusters.get(i));
-//        String json = new GsonBuilder().serializeSpecialFloatingPointValues().create().toJson(pointsClusters);
-//        resp.setContentType("application/json");
-//        resp.setCharacterEncoding("UTF-8");
-//        try {
-//            resp.getWriter().write(json);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
-//    }
-//        String region = req.getParameter("region");
-//        String ssid = req.getParameter("ssid");
-//        resp.setContentType("text/plain");
-//        if (region == null) {
-//            resp.getWriter().println("Please choose a Region");
-//        }
-//        if (ssid == null) {
-//            resp.getWriter().println("Please select an ssid");
-//        }
-//    }
     }
 }

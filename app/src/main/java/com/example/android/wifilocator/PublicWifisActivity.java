@@ -2,7 +2,6 @@ package com.example.android.wifilocator;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -28,21 +27,16 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.json.JSONException;
-import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import static com.example.android.wifilocator.MainActivity.key;
 import static com.example.android.wifilocator.MainActivity.mFirebaseDatabase;
 
 /**
@@ -78,16 +72,11 @@ PublicWifisActivity extends AppCompatActivity {
         regionNames = new ArrayList<String>(regionsMap.keySet());
         mExpandableListAdapter = new WifiExpandableListAdapter(this, regionNames, regionsMap);
 
-        //Key
-//        public final static String Key  = "com.example.android.wifilocator";
-
-
-        // ******************selected child***************************
-        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        // ******************selected Region***************************
+        mExpandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
                 final String Region = regionNames.get(groupPosition);
-                final String ssidSlected= regionsMap.get(regionNames.get(groupPosition)).get(childPosition);
                 mFirebaseDatabase = FirebaseDatabase.getInstance();
                 mBSSIDSDatabaseReference = mFirebaseDatabase.getReference();
                 final Region[] region = new Region[1];
@@ -112,12 +101,8 @@ PublicWifisActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         String regionName = region[0].getRegion();
-//                        boolean foundSSID = false;
                         if (regionName.equals(Region)){
                             for(SSID ssid : region[0].getListSSID()){
-//                                String ssidName = ssid.getSSID();
-
-//                                    foundSSID = true;
                                         for(AccessPoint accessPoint:ssid.getAccessPoints()){
                                             AccessPoint point = new AccessPoint(accessPoint.getLevel(),accessPoint.getLat(),accessPoint.getLng());
                                             points.add(point);
@@ -159,7 +144,6 @@ PublicWifisActivity extends AppCompatActivity {
         String response = conn.getResponseMessage();
         // read the response
         Reader reader = new InputStreamReader(conn.getInputStream(), "UTF-8");
-//        List<AccessPoint> bestWifiPoints = new Gson().fromJson(reader, new TypeToken<List<AccessPoint>>(){}.getType());
         List<Cluster> bestWifiPoints = new Gson().fromJson(reader, new TypeToken<List<Cluster>>(){}.getType());
         Log.d("Clusters", bestWifiPoints.toString());
 
@@ -185,18 +169,6 @@ PublicWifisActivity extends AppCompatActivity {
         args.putSerializable("arrayList",(Serializable)((ArrayList<AccessPoint>)accessPoints));
         intent.putExtra("bundle",args);
         startActivity(intent);
-
-//        Intent intent = new Intent(PublicWifisActivity.this,MainActivity.class);
-//        Bundle args = new Bundle();
-//        args.putSerializable("arrayList",(Serializable)((ArrayList<AccessPoint>)bestWifiPoints));
-//        intent.putExtra("bundle",args);
-//        startActivity(intent);
-
-//        Bundle mBundle = new Bundle();
-//        mBundle.putParcelableArrayList(key,(ArrayList<? extends Parcelable>) bestWifiPoints);
-//        Intent mIntent = new Intent(this, MainActivity.class);
-//        mIntent.putExtra("best", mBundle);
-//        startActivity(mIntent);
     }
 
     @Override
