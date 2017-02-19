@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="SSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_SSID"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@+id/item_imageView"
+        android:layout_toRightOf="@+id/item_imageView"
+        android:layout_toEndOf="@+id/item_imageView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/item_imageView"
+        android:maxWidth="50dp"
+        android:maxHeight="50dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_below="@+id/item_imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:stepSize="1"
+        android:progressTint="@color/colorPrimary"
+        style="?android:attr/ratingBarStyleSmall"
+        android:clickable="true"
+        android:rating="0"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:layout_alignBottom="@+id/item_SSID"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp" />
+
+</RelativeLayout>

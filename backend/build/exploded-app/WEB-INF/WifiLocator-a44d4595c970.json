@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wifilocator-fe294",
+  "private_key_id": "a44d4595c970c6e0d012fce2432839d0af42e419",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEwAIBADANBgkqhkiG9w0BAQEFAASCBKowggSmAgEAAoIBAQDdwe8HplMZqh9r\nLISwmjombnc5DFDyiQNWmewFoKrzngMkHFOUdDx9LOX9tcX5BwKEOf9ZIH0VsmbG\n+Ra7b9RtZ2T2l6OFb8lYkhlmkW5LrGwB1UAsiQvxrmIce8d00ZsVMndH7FxcSz6g\ncpuJtp2yaQvK1Rhp9BVxsRtn4GUf49FBMp9GDnJcPDTiTyd2SumDFNWXJjYo7Js5\nS8Vum3xtT8+aB01RNFLpLrh3VUglJ76lS5TypnMR94kozssP/IYy8l664tn83GqN\nuw3dcZOhv2XBBmUCvaDaHBV4DYrHMHvkGH6cUJvqUufFb5DrzmQhQYqIm/ZeH78L\nO7zZ+IrHAgMBAAECggEBAIIhXd1FUxqKZGmF9E+WEW2gAUJu4cmRcW4OYRxkTi0r\nmnhETx+cnipugIBDfOtHm8hwKFHq6Lwktn8oiJhxZVzWAb9a+NBC6wqYoWM5EFpD\n0hW5SDFaMrIePOCuGjuJDNKBjNGd+A0I8rVAy9kiWqPpVMwwBGWYoETZQ1XPrkfp\nVoK1ac6KkGHqADwk9iGEv9VMUR3sy2iOLHsou+Zsc5HWNZ8fqfAvA76rRKfNIuje\n6aKcj1449VJCylW6UsomaQCgdaU5UM+/hrK8UQvs75a4M+w460WINlJKen8SFRDx\nCGCgPl3+FDRhY9kEAB9SwlQjatjLG8sN4X1WE4Z8sGECgYEA9pg/LCGBcERRk9gx\neUVAAwrLcgttaYx6DsIfclCDqrNK0EutM+xJK/0m9ss8hwZLElH8BV2ct4iDJ3fv\nFt1vphjoZ0BWHhhhtr0YnRxxSOTCiv8IHqgExFho1krAOA+I50WPvY+yWMwilkD8\nDayq1y0qvHyWPUTTShl7Sn0P0Y8CgYEA5jctOcoqNF/Rlf0TByyJbvhVD9E7FkA6\nwmbeoozDd3lwQ/roz1VxN3jxrKS/ymnDbYseV44PSYcViMMD8GWO/3KMgEYyHFAn\niB6GAT2gWMXNbbTSJRTlzsppZKFL25V3MQZ6zvyWC+56EnoAWICbgUxlu4APi1cW\nZsjGyplnJ0kCgYEAzlWD/nQmr36q1899TiCwuBrvMoT3Tur5MqIh1/Agy9Nr1TCN\nQ7YBX+paEQTrp3uPk0vAWekDedqjC4JiLzqn8k5DICoIJPR3xoUhNE0ZSUoIsm9F\nJwmlu3jSeARiJEZzYjilVpMHQx/EDP9hKDwDUzr62G5S8/9D4GvD6wcMFmcCgYEA\nnn7eZCsLY4OUh+70arv+4qeV6I3kYC1YRv8LyF2hNWAmKqdUIWpxx/88Y+AJKxIl\nugVNnnnvjG+0I7QfwiIpkTUMBkRNu7BzhwN8vt3uxy9nf2A+TclVbklsxhtGXqdI\nqDgN1PORWiWVZaMZGdVxOlOetrgz+3q5sYoJUvLKUgECgYEAlC33LeOvB6hMDo33\nGzo77jB3H5IgD7EgNdGtAp652Npj43PxU4IiI0L78S9duFa4ZetK1OOXUB1E30Un\nugEETOOTILpid7NXJvztAtdSNwWk6wZz3YisQsCvQ3wvhnXahP402HYK10EL1nS0\n7l2FHb8sNWDVB7K8NlHIYGzT0FE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "servlet@wifilocator-fe294.iam.gserviceaccount.com",
+  "client_id": "108915760518103490681",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/servlet%40wifilocator-fe294.iam.gserviceaccount.com"
+}

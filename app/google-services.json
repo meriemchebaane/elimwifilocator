@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "468740218647",
+    "firebase_url": "https://wifilocator-fe294.firebaseio.com",
+    "project_id": "wifilocator-fe294",
+    "storage_bucket": "wifilocator-fe294.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468740218647:android:ade1d4747f50b3bd",
+        "android_client_info": {
+          "package_name": "com.example.android.wifilocator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468740218647-j09stjh7lugq2evsl8ba35o74muskljj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.wifilocator",
+            "certificate_hash": "C745A6217787566DA9849BCB102DF2DA88670C60"
+          }
+        },
+        {
+          "client_id": "468740218647-efj2eashh2lldlhr2imd5bpfs8qer1no.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDfT1LpxxRlzKNm47-FRrfk8sX2HT1XLo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468740218647-efj2eashh2lldlhr2imd5bpfs8qer1no.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

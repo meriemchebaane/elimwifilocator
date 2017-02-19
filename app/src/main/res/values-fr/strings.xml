@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wifi Locator</string>
+    <string name="available_wifis">Wifis Disponibles</string>
+    <string name="first_tab">Liste</string>
+    <string name="password">Mot de passe</string>
+    <string name="second_tab">Carte</string>
+    <string name="signIn_msg">Vous avez déjà un compte? Identifier-vous</string>
+    <string name="signUp_msg">En cliquant sur S\'inscrire,vous accepter les conditions d\'utilisation,la politique de confidentialité de Wifi l\'application</string>
+    <string name="sign_in">S\'Identifier</string>
+    <string name="sign_up">S\'Inscrire</string>
+    <string name="user_name">Nom d\'Utilisateur</string>
+    <string name="settings_menu_item">Paramètres</string>
+    <string name="settings_title">Paramètres de Wifi</string>
+</resources>

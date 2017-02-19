@@ -1,0 +1,24 @@
+<resources>
+    <!--Application name-->
+    <string name="app_name">Wifi Locator</string>
+
+    <!--Main Activity-->
+    <!--List title-->
+    <string name="available_wifis">Available Wifis</string>
+    <!--Settings in AppBar-->
+    <string name="action_settings">Settings</string>
+    <!--Rescan in AppBar-->
+    <string name="rescan">Rescan</string>
+    <!--Signout in AppBar-->
+    <string name="sign_out">Sign Out</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">Wifi Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Public Activity Title -->
+    <string name="public_activity_title">Public Wifis</string>
+    <!-- Text to display in the list when there are no wifis caught -->
+    <string name="no_wifis">No Wifis Available</string>
+
+</resources>
